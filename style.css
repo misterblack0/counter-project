@@ -1,0 +1,26 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8785a2;
+}
+
+.container {
+  height: 30vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 1rem;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  text-transform: uppercase;
+}
