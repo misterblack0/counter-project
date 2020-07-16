@@ -3,24 +3,43 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #8785a2;
+  background-color: darkgray;
 }
 
 .container {
-  height: 30vh;
-  width: 30vw;
+  height: 10rem;
+  width: 25rem;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  background-color: #f6f6f6;
-  border-radius: 1rem;
+  background-color: #343334;
+  border-radius: 0.5rem;
+
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
-h1 {
-  font-size: 6rem;
+#counter {
+  font-size: 4rem;
+  color: #fff;
 }
 
-h2 {
-  text-transform: uppercase;
+#counterAdd {
+  font-size: 2rem;
+  color: #727172;
+}
+
+#counterLower {
+  font-size: 2rem;
+  color: #727172;
+}
+
+.btn {
+  font-size: 3rem;
+  background-color: transparent;
+  color: #727172;
+  border: none;
+  transition: all 0.3s;
 }
