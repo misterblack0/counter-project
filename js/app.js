@@ -1,6 +1,10 @@
-const buttonAdd = document.querySelector('.btn-warning');
-const buttonLower = document.querySelector('.btn-secondary');
-const counter = document.querySelector('.counter');
+const buttonAdd = document.querySelector('.add');
+const buttonLower = document.querySelector('.lower');
+const counter = document.querySelector('#counter');
+
+const counterLower = document.querySelector('#counterLower');
+const counterAdd = document.querySelector('#counterAdd');
+
 let count = 0;
 
 counterColor = () => {
@@ -17,9 +21,13 @@ counterColor = () => {
 buttonAdd.addEventListener('click', function () {
   count++;
   counterColor();
+  counterLower.textContent = count - 1;
+counterAdd.textContent = count + 1;
 });
 
 buttonLower.addEventListener('click', function () {
   count--;
   counterColor();
+  counterLower.textContent = count - 1;
+counterAdd.textContent = count + 1;
 });
