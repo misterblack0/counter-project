@@ -9,30 +9,14 @@ body {
 .container {
   height: 10rem;
   width: 25rem;
+  background-color: #343334;
+  border-radius: 0.5rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #343334;
-  border-radius: 0.5rem;
-
-  -webkit-transform: rotateY(0deg);
-  transform: rotateY(0deg);
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
 }
 
-#counter {
-  font-size: 4rem;
-  color: #fff;
-}
-
-#counterAdd {
-  font-size: 2rem;
-  color: #727172;
-}
-
-#counterLower {
-  font-size: 2rem;
+.container h1 {
   color: #727172;
 }
 
@@ -41,5 +25,13 @@ body {
   background-color: transparent;
   color: #727172;
   border: none;
-  transition: all 0.3s;
+  outline: none;
+  opacity: 0.5;
+}
+
+#counter {
+  font-size: 4rem;
+  color: #fff;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
 }

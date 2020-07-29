@@ -1,33 +1,34 @@
-const buttonAdd = document.querySelector('.add');
-const buttonLower = document.querySelector('.lower');
-const counter = document.querySelector('#counter');
-
-const counterLower = document.querySelector('#counterLower');
-const counterAdd = document.querySelector('#counterAdd');
+const btnAdd = document.querySelector(".add");
+const btnSubtract = document.querySelector(".subtract");
+const counter = document.querySelector("#counter");
+const counterLower = document.querySelector("#counterLower");
+const counterHigher = document.querySelector("#counterHigher");
 
 let count = 0;
+
+modifier = () => {
+  counterColor();
+  counterLower.textContent = count - 1;
+  counterHigher.textContent = count + 1;
+};
 
 counterColor = () => {
   counter.textContent = count;
   if (count > 0) {
-    counter.style.color = 'green';
+    counter.style.color = "green";
   } else if (count < 0) {
-    counter.style.color = 'red';
+    counter.style.color = "red";
   } else {
-    counter.style.color = '#000';
+    counter.style.color = "#fff";
   }
 };
 
-buttonAdd.addEventListener('click', function () {
+btnAdd.addEventListener("click", function () {
   count++;
-  counterColor();
-  counterLower.textContent = count - 1;
-counterAdd.textContent = count + 1;
+  modifier();
 });
 
-buttonLower.addEventListener('click', function () {
+btnSubtract.addEventListener("click", function () {
   count--;
-  counterColor();
-  counterLower.textContent = count - 1;
-counterAdd.textContent = count + 1;
+  modifier();
 });
